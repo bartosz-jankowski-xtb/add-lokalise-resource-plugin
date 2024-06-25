@@ -1,0 +1,37 @@
+<!-- Copyright 2000-2023 JetBrains s.r.o. and other contributors. Use of this source code is governed by the Apache 2.0 license that can be found in the LICENSE file. -->
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+
+<idea-plugin>
+
+  <!-- Unique id for this plugin. Must stay constant for the life of the plugin. -->
+  <id>com.xtb.lokalise.plugin</id>
+
+  <!-- Text to display as name on Settings | Plugin page -->
+  <name>Extract Lokalise Resource</name>
+
+  <!-- Product and plugin compatibility requirements -->
+  <depends>com.intellij.modules.androidstudio</depends>
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.modules.java</depends>
+  <depends>org.jetbrains.kotlin</depends>
+  <depends>org.jetbrains.android</depends>
+
+  <!-- Text to display as description on Settings | Plugin page -->
+  <description>
+    <![CDATA[
+    Adds Extract Lokalise string to context menu
+    ]]>
+  </description>
+
+  <!-- Text to display as company information on Settings | Plugin page -->
+  <vendor url="https://xtb.com">XTB S.A.</vendor>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <intentionAction>
+      <language>kotlin</language>
+      <className>com.xtb.lokalise.plugin.K1XtbKotlinAndroidAddStringResourceIntention</className>
+      <category>Kotlin Android</category>
+    </intentionAction>
+  </extensions>
+
+</idea-plugin>
